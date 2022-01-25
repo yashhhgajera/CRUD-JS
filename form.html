@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="form.js"></script>
+</head>
+<body>
+    <div class="form-main">
+        <div class="form-heading">
+            <h1>Data Form</h1>
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="firstName">First Name:</label>
+            </div>
+            <div class="inputerrorbox">
+                <input type="text" id="firstName">
+                <span class="errorbox hidden" id="emptyfname">*Fill the blank</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="lastName">Last Name:</label>
+            </div>
+            <div class="inputerrorbox">
+                <input type="text" id="lastName">
+                <span class="errorbox hidden" id="emptylname">*Fill the blank</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="address">Address:</label>
+            </div>
+            <div class="inputerrorbox">
+                <textarea name="address" id="address" ></textarea>
+                <span class="errorbox hidden" id="emptyaddress">*Fill the blank</span>
+            </div>
+        </div>
+        <div class="input-container-gender">
+            <div class="labelName">
+                <label for="gender">Gender:</label>
+            </div>
+            <div class="inputerrorbox">
+                <div class="gender-selection">
+                    <input type="radio" name="gender" id="male" value="male" ><label for="male">Male</label> 
+                    <input type="radio" name="gender" id="female" value="female" ><label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other" ><label for="other">Other</label>
+                </div>
+                <span class="errorbox hidden" id="emptygender">*Fill the blank</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="email">Email:</label>
+            </div>
+            <div class="inputerrorbox">
+                <input type="email" id="email" value="" >  
+                <span class="errorbox hidden" id="emptyemail">*Fill the blank</span>
+            </div>  
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="password">Password:</label>
+            </div>
+            <div class="inputerrorbox">
+                <input type="password" id="password" value="">
+                <span class="errorbox hidden" id="emptypassword">*Fill the blank</span>
+            </div>
+        </div>
+        <div class="input-container">
+            <div class="labelName">
+                <label for="hobby">Hobby:</label>
+            </div>
+            <div class="inputerrorbox">
+                <div class="hobby-selection">
+                    <div class="hobby"><input type="checkbox" class="check" name="hobby" id="reading" value="reading"><label for="reading">Reading</label></div>
+                    <div class="hobby"><input type="checkbox" class="check" name="hobby" id="playing" value="playing"><label for="playing">Playing</label></div>
+                    <div class="hobby"><input type="checkbox" class="check" name="hobby" id="drawing" value="drawing"><label for="drawing">Drawing</label></div>
+                    <div class="hobby"><input type="checkbox" class="check" name="hobby" id="gaming" value="gaming"><label for="gaming">Gaming</label></div>
+                </div>
+                <span class="errorbox hidden" id="emptyhobby">*Fill the blank</span>
+            </div>
+        </div>
+        
+            <div class="buttons">
+                <div id="resetdiv">
+                    <button type="reset" onclick="resetData()">Reset</button>
+                    
+                </div>
+                <div id="updatesumbitdiv">
+                    <button type="submit" onclick="submitData()" id="submitbtn">Submit</button>
+                </div>
+            </div>
+        
+    </div>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" >No.</th>
+            <th scope="col" >First Name</th>
+            <th scope="col" >Last Name</th>
+            <th scope="col" >Address</th>
+            <th scope="col" >Gender</th>
+            <th scope="col" >Email</th>
+            <th scope="col" >Password</th>
+            <th scope="col" >Hobby</th>
+            <th scope="col" >Action</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+          
+        </tbody>
+      </table>
+
+</body>
+</html>
